@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -20,7 +21,7 @@ export function Contact() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
     
-    // Access Key from your screenshot
+    // Using the verified Access Key: 120515e3-a04d-408b-b373-c0ccaa2d2dfe
     data.access_key = "120515e3-a04d-408b-b373-c0ccaa2d2dfe";
 
     try {
