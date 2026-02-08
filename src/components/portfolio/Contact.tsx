@@ -20,14 +20,10 @@ export function Contact() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
     
-    // YOUR_NEW_WEB3FORMS_ACCESS_KEY_HERE
-    data.access_key = "";
+    // Access Key from your screenshot
+    data.access_key = "120515e3-a04d-408b-b373-c0ccaa2d2dfe";
 
     try {
-      if (!data.access_key) {
-        throw new Error("Form submission is currently waiting for a new API key.");
-      }
-
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -53,8 +49,8 @@ export function Contact() {
       console.error(error);
       toast({
         variant: "destructive",
-        title: "Configuration Needed",
-        description: error.message || "Please check your API key settings.",
+        title: "Submission Error",
+        description: error.message || "Could not send message. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
