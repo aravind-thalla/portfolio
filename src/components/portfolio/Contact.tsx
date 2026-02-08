@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -13,21 +14,48 @@ export function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Using the provided Web3Forms API ID
+    data.access_key = "120515e3-a04d-408b-b373-c0ccaa2d2dfe";
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
       });
-      
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSuccess(true);
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error(result.message || "Failed to send message");
+      }
+    } catch (error) {
+      console.error(error);
+      toast({
+        variant: "destructive",
+        title: "Error Sending Message",
+        description: "There was a problem sending your message. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -90,20 +118,20 @@ export function Contact() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" placeholder="John Doe" required className="bg-background/50 border-white/10 h-12 focus:ring-primary" />
+                  <Input id="name" name="name" placeholder="John Doe" required className="bg-background/50 border-white/10 h-12 focus:ring-primary" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" required className="bg-background/50 border-white/10 h-12 focus:ring-primary" />
+                  <Input id="email" name="email" type="email" placeholder="john@example.com" required className="bg-background/50 border-white/10 h-12 focus:ring-primary" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="Project Opportunity" required className="bg-background/50 border-white/10 h-12 focus:ring-primary" />
+                <Input id="subject" name="subject" placeholder="Project Opportunity" required className="bg-background/50 border-white/10 h-12 focus:ring-primary" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
-                <Textarea id="message" placeholder="Hi Arvind, I'd like to talk about..." required className="bg-background/50 border-white/10 min-h-[150px] focus:ring-primary" />
+                <Textarea id="message" name="message" placeholder="Hi Arvind, I'd like to talk about..." required className="bg-background/50 border-white/10 min-h-[150px] focus:ring-primary" />
               </div>
 
               <Button type="submit" size="lg" disabled={isSubmitting} className="w-full h-14 bg-primary hover:bg-primary/90 rounded-xl text-lg font-bold">
