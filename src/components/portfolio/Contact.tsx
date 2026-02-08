@@ -21,7 +21,7 @@ export function Contact() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
     
-    // Using the provided Web3Forms API ID
+    // Using the provided Web3Forms API ID for email delivery
     data.access_key = "120515e3-a04d-408b-b373-c0ccaa2d2dfe";
 
     try {
