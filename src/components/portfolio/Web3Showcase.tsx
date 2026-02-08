@@ -1,8 +1,9 @@
+
 "use client";
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Coins, ShieldCheck, Zap, Globe, Cpu, Link as LinkIcon } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { ShieldCheck, Globe, Zap, Cpu, Link as LinkIcon } from 'lucide-react';
 
 const web3Features = [
   {
@@ -23,8 +24,8 @@ const web3Features = [
 ];
 
 export function Web3Showcase() {
-  // Using the provided API reference ID for configuration
-  const API_ID = "120515e3-a04d-408b-b373-c0ccaa2d2dfe";
+  // Placeholder for the new API reference ID
+  const API_ID = "PENDING_NEW_KEY";
 
   return (
     <section id="web3" className="py-24 bg-muted/30">
@@ -66,19 +67,19 @@ export function Web3Showcase() {
                   <LinkIcon className="h-5 w-5 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg">Active Web3 API Instance</h4>
+                  <h4 className="font-bold text-lg">Web3 API Integration</h4>
                   <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mt-1">
-                    ID: {API_ID}
+                    STATUS: Awaiting Configuration
                   </p>
                 </div>
               </div>
               <div className="flex gap-3">
-                <span className="flex items-center gap-1.5 text-xs font-medium text-green-500 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                  API Active
+                <span className="flex items-center gap-1.5 text-xs font-medium text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+                  <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                  Key Required
                 </span>
                 <span className="flex items-center gap-1.5 text-xs font-medium text-secondary bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">
-                  Mainnet Connected
+                  Ready to Connect
                 </span>
               </div>
             </CardContent>

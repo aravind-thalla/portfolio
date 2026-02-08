@@ -21,10 +21,14 @@ export function Contact() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
     
-    // Using the provided Web3Forms API ID for email delivery
-    data.access_key = "120515e3-a04d-408b-b373-c0ccaa2d2dfe";
+    // Replace the empty string below with your new Web3Forms Access Key
+    data.access_key = "";
 
     try {
+      if (!data.access_key) {
+        throw new Error("Form submission is currently disabled. Please provide a valid API key.");
+      }
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -46,12 +50,12 @@ export function Contact() {
       } else {
         throw new Error(result.message || "Failed to send message");
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
       toast({
         variant: "destructive",
         title: "Error Sending Message",
-        description: "There was a problem sending your message. Please try again later.",
+        description: error.message || "There was a problem sending your message. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
