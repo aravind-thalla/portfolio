@@ -1,9 +1,8 @@
-
 "use client";
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { ShieldCheck, Globe, Zap, Cpu, Link as LinkIcon } from 'lucide-react';
+import { ShieldCheck, Globe, Zap, Cpu } from 'lucide-react';
 
 const web3Features = [
   {
@@ -24,9 +23,6 @@ const web3Features = [
 ];
 
 export function Web3Showcase() {
-  // Placeholder for the new API reference ID
-  const API_ID = "PENDING_NEW_KEY";
-
   return (
     <section id="web3" className="py-24 bg-muted/30">
       <div className="container px-6 mx-auto">
@@ -39,7 +35,7 @@ export function Web3Showcase() {
             <div className="w-20 h-1.5 bg-secondary rounded-full" />
           </div>
           <p className="max-w-md text-muted-foreground">
-            Exploring the future of the decentralized web with a focus on API integrations and smart contract interactions.
+            Exploring the future of the decentralized web with a focus on DApp development and smart contract interactions.
           </p>
         </div>
 
@@ -57,33 +53,6 @@ export function Web3Showcase() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12">
-          <Card className="bg-secondary/5 border-secondary/20 border-dashed">
-            <CardContent className="p-6 flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-secondary/20 rounded-full">
-                  <LinkIcon className="h-5 w-5 text-secondary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg">Web3 API Integration</h4>
-                  <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mt-1">
-                    STATUS: Awaiting Configuration
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <span className="flex items-center gap-1.5 text-xs font-medium text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-                  <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-                  Key Required
-                </span>
-                <span className="flex items-center gap-1.5 text-xs font-medium text-secondary bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">
-                  Ready to Connect
-                </span>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

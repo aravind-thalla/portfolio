@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from 'react';
@@ -21,12 +20,12 @@ export function Contact() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
     
-    // Replace the empty string below with your new Web3Forms Access Key
+    // YOUR_NEW_WEB3FORMS_ACCESS_KEY_HERE
     data.access_key = "";
 
     try {
       if (!data.access_key) {
-        throw new Error("Form submission is currently disabled. Please provide a valid API key.");
+        throw new Error("Form submission is currently waiting for a new API key.");
       }
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -54,8 +53,8 @@ export function Contact() {
       console.error(error);
       toast({
         variant: "destructive",
-        title: "Error Sending Message",
-        description: error.message || "There was a problem sending your message. Please try again later.",
+        title: "Configuration Needed",
+        description: error.message || "Please check your API key settings.",
       });
     } finally {
       setIsSubmitting(false);
