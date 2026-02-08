@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Github, Linkedin, Mail, FileDown } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, FileDown, Code2 } from 'lucide-react';
 
 export function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -64,15 +64,28 @@ export function Hero() {
           </Button>
         </div>
 
-        <div className="mt-16 flex gap-6 justify-center animate-reveal [animation-delay:1000ms]">
-          <a href="https://github.com/aravind-thalla" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
+        <div className="mt-16 flex flex-wrap gap-8 justify-center animate-reveal [animation-delay:1000ms]">
+          <a href="https://github.com/aravind-thalla" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex flex-col items-center gap-1 group">
             <Github className="h-6 w-6" />
+            <span className="text-[10px] uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">GitHub</span>
           </a>
-          <a href="https://linkedin.com/in/thalla-aravind" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/thalla-aravind-467b912a4" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex flex-col items-center gap-1 group">
             <Linkedin className="h-6 w-6" />
+            <span className="text-[10px] uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">LinkedIn</span>
           </a>
-          <a href="mailto:aravind108028@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://leetcode.com/u/aravind1080/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex flex-col items-center gap-1 group">
+            <Code2 className="h-6 w-6" />
+            <span className="text-[10px] uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">LeetCode</span>
+          </a>
+          <a href="https://www.geeksforgeeks.org/profile/aravind1080" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex flex-col items-center gap-1 group">
+             <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.116 2.181a12.116 12.116 0 0 0-12.116 12.116 12.116 12.116 0 0 0 12.116 12.116c2.724 0 5.242-.89 7.272-2.394l-2.015-2.015a9.3 9.3 0 0 1-5.257 1.621 9.3 9.3 0 1 1 0-18.6 9.3 9.3 0 0 1 5.257 1.621l2.015-2.015a12.116 12.116 0 0 0-7.272-2.394zM16.48 8.01l-1.4 1.4 2.59 2.59-2.59 2.59 1.4 1.4 3.99-3.99-3.99-3.99z"/>
+             </svg>
+            <span className="text-[10px] uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">GFG</span>
+          </a>
+          <a href="mailto:aravind108028@gmail.com" className="text-muted-foreground hover:text-primary transition-colors flex flex-col items-center gap-1 group">
             <Mail className="h-6 w-6" />
+            <span className="text-[10px] uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">Email</span>
           </a>
         </div>
       </div>

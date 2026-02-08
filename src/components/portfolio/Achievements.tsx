@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Award, Code2, TrendingUp, Github } from 'lucide-react';
+import { Award, Code2, TrendingUp, BookOpen } from 'lucide-react';
 
 const stats = [
   {
@@ -13,11 +13,11 @@ const stats = [
     link: "https://leetcode.com/u/aravind1080/"
   },
   {
-    icon: Award,
-    value: "Strong",
-    label: "Java Foundation",
-    description: "Excellence in object-oriented programming and system design.",
-    link: "#"
+    icon: BookOpen,
+    value: "Active",
+    label: "GeeksforGeeks",
+    description: "In-depth learning and solving complex DSA challenges on GFG.",
+    link: "https://www.geeksforgeeks.org/profile/aravind1080"
   },
   {
     icon: TrendingUp,
@@ -51,10 +51,11 @@ export function Achievements() {
                 </p>
                 <a 
                   href={stat.link} 
-                  target="_blank"
+                  target={stat.link !== "#" ? "_blank" : "_self"}
+                  rel={stat.link !== "#" ? "noopener noreferrer" : ""}
                   className="inline-flex items-center text-primary text-sm font-bold hover:gap-2 transition-all"
                 >
-                  View Evidence <TrendingUp className="ml-1 h-4 w-4" />
+                  View Profile <TrendingUp className="ml-1 h-4 w-4" />
                 </a>
               </CardContent>
             </Card>

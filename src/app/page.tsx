@@ -30,9 +30,11 @@ export default function Home() {
           <p className="text-muted-foreground text-sm">
             &copy; {new Date().getFullYear()} Thalla Aravind. All rights reserved.
           </p>
-          <div className="mt-6 flex justify-center gap-6">
-            <a href="https://linkedin.com/in/thalla-aravind" className="text-xs text-muted-foreground hover:text-primary transition-colors">LinkedIn</a>
-            <a href="https://github.com/aravind-thalla" className="text-xs text-muted-foreground hover:text-primary transition-colors">GitHub</a>
+          <div className="mt-6 flex justify-center flex-wrap gap-6">
+            <a href="https://www.linkedin.com/in/thalla-aravind-467b912a4" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-primary transition-colors">LinkedIn</a>
+            <a href="https://github.com/aravind-thalla" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-primary transition-colors">GitHub</a>
+            <a href="https://leetcode.com/u/aravind1080/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-primary transition-colors">LeetCode</a>
+            <a href="https://www.geeksforgeeks.org/profile/aravind1080" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-primary transition-colors">GeeksforGeeks</a>
             <a href="mailto:aravind108028@gmail.com" className="text-xs text-muted-foreground hover:text-primary transition-colors">Email</a>
           </div>
         </div>
