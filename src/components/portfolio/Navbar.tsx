@@ -67,6 +67,8 @@ export function Navbar() {
             <a
               href="/myresume.pdf"
               download="Thalla_Aravind_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
             >
               <FileDown className="h-4 w-4" /> Resume
@@ -107,6 +109,8 @@ export function Navbar() {
         <a
           href="/myresume.pdf"
           download="Thalla_Aravind_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => setIsMobileMenuOpen(false)}
           className="text-2xl font-headline font-bold text-secondary flex items-center gap-3"
         >

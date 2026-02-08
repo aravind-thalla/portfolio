@@ -1,1 +1,1 @@
-# Ensures the public directory is tracked and exists.
+# Ensures the public folder exists at the root for static assets like myresume.pdf
