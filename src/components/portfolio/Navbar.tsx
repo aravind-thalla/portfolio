@@ -65,7 +65,7 @@ export function Navbar() {
           ))}
           <div className="flex items-center gap-4 border-l pl-8 ml-4">
             <a
-              href="/resume.pdf"
+              href="/myresume.pdf"
               download="Thalla_Aravind_Resume.pdf"
               className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
             >
@@ -105,7 +105,7 @@ export function Navbar() {
           </a>
         ))}
         <a
-          href="/resume.pdf"
+          href="/myresume.pdf"
           download="Thalla_Aravind_Resume.pdf"
           onClick={() => setIsMobileMenuOpen(false)}
           className="text-2xl font-headline font-bold text-secondary flex items-center gap-3"
