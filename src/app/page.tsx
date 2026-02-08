@@ -4,7 +4,6 @@ import { Education } from '@/components/portfolio/Education';
 import { Journey } from '@/components/portfolio/Journey';
 import { Skills } from '@/components/portfolio/Skills';
 import { Projects } from '@/components/portfolio/Projects';
-import { Web3Showcase } from '@/components/portfolio/Web3Showcase';
 import { Achievements } from '@/components/portfolio/Achievements';
 import { Contact } from '@/components/portfolio/Contact';
 
@@ -18,7 +17,6 @@ export default function Home() {
       <Journey />
       <Skills />
       <Projects />
-      <Web3Showcase />
       <Achievements />
       <Contact />
       
