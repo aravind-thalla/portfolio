@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/suggest-code-improvements.ts';
+// AI flows can be registered here if needed in the future
