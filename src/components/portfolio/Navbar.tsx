@@ -66,7 +66,7 @@ export function Navbar() {
           ))}
           <div className="flex items-center gap-4 border-l pl-8 ml-4">
             <a
-              href="/myresume.pdf"
+              href="https://drive.google.com/file/d/15OXeXZOSV-xcot0XkZeINiPAczaDsrgq/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
@@ -107,7 +107,7 @@ export function Navbar() {
           </a>
         ))}
         <a
-          href="/myresume.pdf"
+          href="https://drive.google.com/file/d/15OXeXZOSV-xcot0XkZeINiPAczaDsrgq/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setIsMobileMenuOpen(false)}

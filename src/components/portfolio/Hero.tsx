@@ -56,7 +56,7 @@ export function Hero() {
             </a>
           </Button>
           <Button size="lg" variant="secondary" className="rounded-full px-8 group" asChild>
-            <a href="/myresume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/15OXeXZOSV-xcot0XkZeINiPAczaDsrgq/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               Download CV <FileDown className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
             </a>
           </Button>
