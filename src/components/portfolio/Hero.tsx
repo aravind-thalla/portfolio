@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, FileDown } from 'lucide-react';
 
 export function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -52,6 +52,11 @@ export function Hero() {
           <Button size="lg" className="rounded-full px-8 bg-primary hover:bg-primary/90 group" asChild>
             <a href="#projects">
               View Projects <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+          <Button size="lg" variant="secondary" className="rounded-full px-8 group" asChild>
+            <a href="/resume.pdf" download>
+              Download CV <FileDown className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
             </a>
           </Button>
           <Button size="lg" variant="outline" className="rounded-full px-8 border-primary/50 hover:bg-primary/5" asChild>
