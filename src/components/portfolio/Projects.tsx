@@ -23,7 +23,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "Personal responsive portfolio showcasing development journey, projects, and skills with focus on high-performance animations and premium UI.",
-    tech: ["Next.js", "Tailwind", "GenAI"],
+    tech: ["Next.js", "Tailwind", "TypeScript"],
     github: "https://github.com/aravind-thalla",
     type: "Frontend"
   }

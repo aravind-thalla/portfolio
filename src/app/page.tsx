@@ -5,7 +5,6 @@ import { Journey } from '@/components/portfolio/Journey';
 import { Skills } from '@/components/portfolio/Skills';
 import { Projects } from '@/components/portfolio/Projects';
 import { Achievements } from '@/components/portfolio/Achievements';
-import { AICodeCoach } from '@/components/portfolio/AICodeCoach';
 import { Contact } from '@/components/portfolio/Contact';
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <Skills />
       <Projects />
       <Achievements />
-      <AICodeCoach />
       <Contact />
       
       <footer className="py-12 border-t bg-background">
