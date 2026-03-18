@@ -14,7 +14,7 @@ export function Education() {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
           let current = 0;
-          const target = 8.07;
+          const target = 8.53;
           const step = target / 50;
           const timer = setInterval(() => {
             current += step;
